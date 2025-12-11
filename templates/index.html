@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+</head>
+<body>
 
+<h1>House Price Prediction</h1>
+
+<form action="/predict" method="post">
+
+    Area (sqft):<br>
+    <input type="number" name="Area" required><br><br>
+
+    Bedrooms:<br>
+    <input type="number" name="Bedrooms" required><br><br>
+
+    Bathrooms:<br>
+    <input type="number" name="Bathrooms" required><br><br>
+
+    Stories:<br>
+    <input type="number" name="Stories" required><br><br>
+
+    Parking:<br>
+    <input type="number" name="Parking" required><br><br>
+
+    Age of House:<br>
+    <input type="number" name="Age" required><br><br>
+
+    Location:<br>
+    <select name="Location" required>
+        <option value="1">City</option>
+        <option value="2">Suburban</option>
+        <option value="3">Rural</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Predict Price">
+</form>
+
+<!-- DISPLAY RESULT -->
+<h2 style="color:green;">{{ prediction_text }}</h2>
+
+</body>
+</html>
